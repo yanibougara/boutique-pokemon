@@ -1,0 +1,357 @@
+:root {
+    --primary-color: #ffcb05;
+    --secondary-color: #3b4cca;
+    --text-color: #333;
+    --font-family: "Arial", sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 10%,
+        rgba(3, 149, 213, 1) 40%,
+        rgba(1, 182, 235, 1) 87%
+    );
+}
+
+header {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgb(96, 96, 175) 10%,
+        rgb(19, 79, 105) 40%,
+        rgba(1, 182, 235, 1) 87%
+    );
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: var(--text-color);
+}
+
+main {
+    padding: 2%;
+
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header,
+    footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 23px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(190 238 238);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+    height: 200px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+#back-to-shop,
+#clear-cart {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#back-to-shop {
+    background-color: #4caf50;
+}
+
+#back-to-shop:hover {
+    background-color: #41a047;
+}
+
+#clear-cart {
+    background-color: red;
+}
+
+#clear-cart:hover {
+    background-color: darkred;
+}
+
+.container {
+    display: flex;
+}
+
+aside#filters {
+    width: 20%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #b9b8b8;
+}
+
+main#product-list {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-left: 33%;
+}
+
+.pokeball {
+    width: 100px;
+    height: 100px;
+}
+
+.nav {
+    display: flex;
+}
+
+.pokeball {
+    /* Ajustez la taille de l'image selon vos besoins */
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.add-to-cart {
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.return {
+    text-decoration: none;
+    color: white;
+}
+
+p {
+    color: rgb(22, 15, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cart-item {
+    border: 1px solid white;
+    width: 20%;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+background-color: #838a8e;
+    margin: 1%;
+}
+
+h3 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cart-item h3 {
+    color: rgb(141, 216, 244);
+    animation: colorChange 2s infinite;
+}
+
+.nav h1 {
+    color: rgb(141, 216, 244);
+    animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(227, 181, 164);
+    }
+    50% {
+        color: rgb(136, 136, 238);
+    }
+    100% {
+        color: rgb(148, 241, 148);
+    }
+}
+
+.menuproduct h1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: -34%;
+}
+
+.menuproduct h1 {
+    color: rgb(141, 216, 244);
+    animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(227, 181, 164);
+    }
+    50% {
+        color: rgb(136, 136, 238);
+    }
+    100% {
+        color: rgb(148, 241, 148);
+    }
+}
+
+.achat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.achat {
+    color: rgb(141, 216, 244);
+    animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(227, 181, 164);
+    }
+    50% {
+        color: rgb(136, 136, 238);
+    }
+    100% {
+        color: rgb(148, 241, 148);
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+}
+
+aside{
+background-image: url("pokemon.jpeg")
+}
+
+
+.filter-section h3 {
+ background-color: #b3ecf5;
+}
